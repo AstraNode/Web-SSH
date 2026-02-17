@@ -39,7 +39,7 @@ A feature-rich, web-based SSH terminal built with Next.js, React, and Socket.io.
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/ASr/ssh-terminal.git
+    git clone https://github.com/AstraNode/Web-SSH.git
     cd ssh-terminal
     ```
 

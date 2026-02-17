@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        border-color: theme("colors.border");
+    }
+
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        @apply bg-black text-white font-sans antialiased;
+        overflow: hidden;
+    }
+
+    /* Disable all outlines globally, we handle focus with ring */
+    :focus {
+        outline: none;
+    }
+}
+
+/* ── xterm overrides to enforce pure black background ── */
+.xterm {
+    padding: 0 !important;
+}
+
+.xterm-viewport {
+    background-color: #000000 !important;
+}
+
+.xterm-screen {
+    background-color: #000000 !important;
+}
+
+/* ── Scrollbar (sidebar & scroll area) ── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
+
+/* ── Animations for toasts ── */
+@keyframes slide-in-from-bottom-4 {
+    from {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-in {
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.slide-in-from-bottom-4 {
+    animation-name: slide-in-from-bottom-4;
+}
+
+.fade-in {
+    animation-name: fade-in;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

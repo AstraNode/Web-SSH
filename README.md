@@ -86,20 +86,6 @@ If you still wish to deploy the frontend to Vercel (e.g., for testing the UI), y
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fssh-terminal)
 
-### Docker Deployment (Recommended)
-
-For a fully functional production deployment, use Docker.
-
-1.  **Build the image:**
-    ```bash
-    docker build -t ssh-terminal .
-    ```
-
-2.  **Run the container:**
-    ```bash
-    docker run -p 3000:3000 ssh-terminal
-    ```
-
 ## 🔒 Security Note
 
 This application acts as a bridge between your browser and the SSH server.

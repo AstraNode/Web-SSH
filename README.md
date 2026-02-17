@@ -84,7 +84,7 @@ This application uses **WebSockets** (`socket.io`) and a custom Node.js server (
 
 If you still wish to deploy the frontend to Vercel (e.g., for testing the UI), you can use the provided `vercel.json`.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fssh-terminal)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAstraNode%2FWeb-SSH)
 
 ## 🔒 Security Note
 

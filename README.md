@@ -5,6 +5,8 @@
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 
+![View Counter](https://count.getloli.com/get/@AstraNode?theme=capoo-2)
+
 A feature-rich, web-based SSH terminal built with Next.js, React, and Socket.io. This application allows you to connect to and manage remote servers directly from your browser with a fully functional, responsive terminal interface.
 
 ## ✨ Features
@@ -37,7 +39,7 @@ A feature-rich, web-based SSH terminal built with Next.js, React, and Socket.io.
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/ssh-terminal.git
+    git clone https://github.com/ASr/ssh-terminal.git
     cd ssh-terminal
     ```
 
@@ -69,6 +71,34 @@ To create a production build:
 npm run build
 npm start
 ```
+
+## 🚀 Deployment
+
+### ⚠️ Important Note
+This application uses **WebSockets** (`socket.io`) and a custom Node.js server (`server.ts`) to handle SSH connections. **Serverless platforms like Vercel or Netlify do not support persistent WebSocket connections.**
+
+- **Vercel / Netlify**: You can deploy the frontend securely, but the SSH terminal functionality **will not work**.
+- **Recommended**: Deploy on a VPS (DigitalOcean, Linode, AWS EC2) or a PaaS that supports long-running Node.js processes (Railway, Render, Heroku).
+
+### Vercel Deployment (Frontend Only)
+
+If you still wish to deploy the frontend to Vercel (e.g., for testing the UI), you can use the provided `vercel.json`.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fssh-terminal)
+
+### Docker Deployment (Recommended)
+
+For a fully functional production deployment, use Docker.
+
+1.  **Build the image:**
+    ```bash
+    docker build -t ssh-terminal .
+    ```
+
+2.  **Run the container:**
+    ```bash
+    docker run -p 3000:3000 ssh-terminal
+    ```
 
 ## 🔒 Security Note
 
